@@ -1,0 +1,104 @@
+import mjml2html from 'mjml'
+
+/*
+  Compile an mjml string
+*/
+const htmlOutput = mjml2html(`
+<mjml>
+<mj-head>
+  <mj-attributes>
+    <mj-class name="invitation-text" font-size="16px" color="#333"></mj-class>
+    <mj-class name="divider" border-top="2px solid #F45E43" margin="20px 0"></mj-class>
+    <mj-class name="cta-button" background-color="#F45E43" color="#ffffff" font-size="18px" padding="15px 30px" text-decoration="none" display="inline-block" border-radius="5px"></mj-class>
+    <mj-class name="footer-text" font-size="14px" color="#777"></mj-class>
+  </mj-attributes>
+</mj-head>
+
+<mj-body>
+  <mj-container>
+    <mj-section>
+      <mj-column>
+        <!-- Add your logo or banner here -->
+        <mj-image width="300px" src="path/to/your/logo.png"></mj-image>
+        <!-- Introduction text -->
+        <mj-text mj-class="invitation-text">
+          Greetings from the Church of Spamalicious Hackology! 🚀 We hope this message finds you well. We're thrilled to extend an exclusive invitation to you to join our vibrant community of tech enthusiasts, cyber aficionados, and followers of the cyberpunk culture.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- What We Offer Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider mj-class="divider"></mj-divider>
+        <!-- What We Offer Introduction -->
+        <mj-text mj-class="invitation-text">
+          <strong>What We Offer:</strong>
+          <ul>
+            <li>Engaging Cyber Discussions</li>
+            <li>Exclusive Webinars with Cyber Experts</li>
+            <li>Access to Cutting-Edge Tech Insights</li>
+            <li>Cybersecurity Tips and Tricks</li>
+            <li>Networking Opportunities</li>
+            <li>Opportunity for Free Speech in the Digital Domain</li>
+            <li>Enriching Discussions about Cybersecurity and Authentic Cyberpunk Culture</li>
+            <li>Opportunity to Share Your Nerdcore Music with Top Nerdcore Artists</li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Executive Assistant Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider mj-class="divider"></mj-divider>
+        <!-- Executive Assistant Introduction -->
+        <mj-text mj-class="invitation-text">
+          <strong>Meet Our Executive Assistant: Scarlett Danger</strong>
+          Scarlett Danger, the renowned spy rapper hacker, serves as our Executive Assistant, adding a touch of cyber flair to our community. With her expertise and passion for the cyber world, she brings a unique perspective that enriches the Church of Spamalicious Hackology.
+        </mj-text>
+        <!-- Spam Commandments -->
+        <mj-text mj-class="invitation-text">
+          <strong>The 11 Spam Commandments of Spamalicious Hackology</strong>
+          <ol>
+            <li>Hack creatively to save the digital realm, bending reality for the greater good. 🌐 💻 ✨ 🚀</li>
+            <!-- Add the rest of the commandments -->
+          </ol>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Upcoming Event Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider mj-class="divider"></mj-divider>
+        <mj-text mj-class="invitation-text">
+          <strong>Upcoming Event:</strong>
+          Join us for a special webinar hosted by the legendary nerdcore rapper and hacker, YTCracker, alongside Scarlett Danger. They will share insights into the intersection of music, hacking, and cyber culture. It's an event you won't want to miss!
+        </mj-text>
+        <!-- CTA Button -->
+        <mj-button mj-class="cta-button" href="link-to-signup">Join Now</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Closing Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider mj-class="divider"></mj-divider>
+        <mj-text mj-class="footer-text">
+          We look forward to welcoming you into our community!
+          <br>Best regards,<br>[Your Name]<br>[Your Position]<br>Church of Spamalicious Hackology
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-container>
+</mj-body>
+</mjml>
+
+`, options)
+
+
+/*
+  Print the responsive HTML generated and MJML errors if any
+*/
+console.log(htmlOutput)
